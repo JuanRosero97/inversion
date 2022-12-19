@@ -1,0 +1,258 @@
+.wrap-register{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+
+.back-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--textColorOne);
+}
+
+.welcome-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 68px;
+    color: var(--textColorTwo);
+}
+
+.welcome-subtext{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.25px;
+    opacity: 0.99;
+    color: var(--textColorTr);
+}
+
+.how-know{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #333333;
+}
+
+.how-know-sub{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 0.25px;
+    color: #B4B4B4;
+}
+
+.group-input{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+  }
+
+.overrideheight{
+    height: 48px;
+    padding: .25rem 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    border-radius: .6px;
+    background: #FFFFFF;
+    border: 1px solid var(--borderColor);
+}
+
+.overrideheight.style-right{
+    padding-right: 40px;
+  }
+
+.input-error-message{
+    // margin: 5px 10px 0px 0px;
+    text-align: left;
+    color:var(--errorColorText);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+  }
+
+.form-control:focus {
+    border-color: var(--principalColor);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px var(--principalColor);
+}
+
+.wrongText{
+    background: rgba(243, 78, 78, 0.2) !important;
+    //border: 1px solid var(--errorColorText) !important;
+}
+
+.input-icon{
+    position: absolute;
+    width: 18px !important;
+    //height: auto;
+    //color:var(--inputFocusColor);
+  }
+
+.input-icon.icon-right{
+    right:0;
+    padding-right: 45px;
+    margin-top: 13px;
+    background: none;
+    border: none;
+  }
+
+.content-know{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.button-know{
+    padding: 10px 12px 12px 10px;
+    background: #FFFFFF;
+    border: 1px solid var(--borderColor);
+    width: 40%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin: 0 5px 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.button-know:hover{
+    background: #70FFD4;
+}
+
+.text-skill{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #000000;
+    opacity: 0.4;
+}
+
+.active{
+    background: #70FFD4 !important;
+}
+
+.activeText{
+    opacity: 0.7 !important;
+}
+
+.terminos{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: var(--textColorTr);
+}
+
+.terminos a{
+    color: var(--errorColorText)
+}
+
+.customSelect,
+::before,
+::after {
+  box-sizing: initial;
+}
+
+.customSelect {
+    position: relative;
+    float:left;
+}
+
+  .customSelect label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+  }
+
+  .customSelect label:after {
+    content: '';
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #70FFD4;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .customSelect input[type=checkbox] {
+    visibility: hidden;
+  }
+
+  .customSelect input[type=checkbox]:checked + label:after {
+    opacity: 1;
+  }
+
+  .label-text {
+    position: relative;
+    left: 10px;
+    margin-left: 12px;
+  }
+
+  .btn-registrarse{
+    background: #000000;
+    border-radius: 50px;
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .btn-registrarse:disabled{
+    opacity: 0.3;
+  }
+
+  .text-btn{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+  }
+
+.have-account{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #333333;
+    opacity: 0.3;
+}
+
+.login-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: var(--errorColorText)
+}

@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #FFFFFF;
+}
+
+:root {
+    --backgroundColor: #FFFFFF;
+    --textColorOne:#262731;
+    --textColorTwo:#303031;
+    --textColorTr:#404040;
+    --principalColor:#6decb9;
+    --errorColorText:#4743E0;
+    --borderColor: #D1D1D1;
+    --colorBread:#606176
+}
+
+/* Global padding */
+
+.pd-t-20{padding-top: 20px};
+.pd-t-30{padding-top: 30px};
+.pd-t-40{padding-top: 40px};
+
+.pd-l-0 {padding-left: 0px};
+.pd-l-20 {padding-left: 20px};
+.pd-l-35 {padding-left: 35px};
+
+.pd-r-0 {padding-right: 0px};
+.pd-r-10 {padding-right: 10px};
+.pd-r-35 {padding-right: 35px};
+
+/* Margin global */
+
+.mt-10{margin-top: 10px;}
+.mt-15{margin-top: 15px;}
+.mt-20{margin-top: 20px;}
+.mt-30{margin-top: 30px;}
+.mt-40{margin-top: 40px;}
+
+.mw-140{max-width: 140px;}
+
+.mb-30{margin-bottom: 30px;}
+.mb-40{margin-bottom: 40px;}
+
+.mr-10{margin-right: 10px;}

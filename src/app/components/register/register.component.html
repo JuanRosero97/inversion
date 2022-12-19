@@ -1,0 +1,161 @@
+<div class="container-fluid d-flex justify-content-center align-items-center pd-t-30">
+    <div style="width: 500px;">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-start align-items-center">
+                <img class="pd-l-20 pd-r-10" src="../../../assets/icons/arrow-left.svg" alt="">
+                <span class="back-text">Volver</span>
+            </div>
+        </div>
+        <div class="pd-t-30 wrap-register">
+          <div class="row">
+              <div class="col-12">
+                  <div><span class="welcome-text">Bienvenido</span></div>
+                  <div><span class="welcome-subtext">Regístrate a nuestra comunidad de inversionistas.</span></div>
+                  <div class="pd-t-20"><span class="welcome-subtext">Registro</span></div>
+              </div>
+          </div>
+          <form [formGroup]="registerForm">
+            <!-- Nombre -->
+            <div class="row">
+                <div class="col-12 mt-10">
+                    <div class="input-block">
+                        <input
+                        type="text"
+                        class="form-control overrideheight register-form"
+                        [ngClass]="{ 'wrongText': registerForm.get('nombre').errors && (registerForm.get('nombre').dirty || registerForm.get('nombre').touched) }"
+                        id="nombre"
+                        [(ngModel)]="register.nombre"
+                        formControlName="nombre" autocomplete="off" required spellcheck="false" placeholder="Nombre completo">
+                    </div>
+                    <ng-container style="margin-top:5px" *ngFor="let validation of validation_messages.nombre">
+                        <div class="input-error-message" *ngIf="registerForm.get('nombre').hasError(validation.type) && (registerForm.get('nombre').dirty || registerForm.get('nombre').touched)">
+                          {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="row">
+                <div class="col-12 mt-15">
+                    <div class="input-block">
+                        <input
+                        type="text"
+                        class="form-control overrideheight register-form"
+                        [ngClass]="{ 'wrongText': registerForm.get('email').errors && (registerForm.get('email').dirty || registerForm.get('email').touched) }"
+                        id="email"
+                        [(ngModel)]="register.email"
+                        formControlName="email" autocomplete="off" required spellcheck="false" placeholder="Correo electrónico">
+                    </div>
+                    <ng-container style="margin-top:5px" *ngFor="let validation of validation_messages.email">
+                        <div class="input-error-message" *ngIf="registerForm.get('email').hasError(validation.type) && (registerForm.get('email').dirty || registerForm.get('email').touched)">
+                          {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <!-- Numero -->
+            <div class="row">
+                <div class="col-4 mt-15 pd-r-0">
+                    <div class="input-block">
+                        <input
+                        type="text"
+                        class="form-control overrideheight register-form"
+                        [ngClass]="{ 'wrongText': registerForm.get('indicativo').errors && (registerForm.get('indicativo').dirty || registerForm.get('indicativo').touched) }"
+                        id="indicativo"
+                        [(ngModel)]="register.indicativo"
+                        formControlName="indicativo" autocomplete="off" required spellcheck="false" placeholder="+000">
+                    </div>
+                </div>
+                <div class="col-8 mt-15 pd-l-0">
+                    <div class="input-block">
+                        <input
+                        type="text"
+                        class="form-control overrideheight register-form"
+                        [ngClass]="{ 'wrongText': registerForm.get('numero').errors && (registerForm.get('numero').dirty || registerForm.get('numero').touched) }"
+                        id="numero"
+                        [(ngModel)]="register.numero"
+                        formControlName="numero" autocomplete="off" required spellcheck="false" placeholder="00 000 000">
+                    </div>
+                </div>
+                <ng-container style="margin-top:2px" *ngFor="let validation of validation_messages.indicativo">
+                    <div class="input-error-message" *ngIf="registerForm.get('indicativo').hasError(validation.type) && (registerForm.get('indicativo').dirty || registerForm.get('indicativo').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+                <ng-container style="margin-top:2px" *ngFor="let validation of validation_messages.numero">
+                    <div class="input-error-message" *ngIf="registerForm.get('numero').hasError(validation.type) && (registerForm.get('numero').dirty || registerForm.get('numero').touched)">
+                        {{ validation.message }}
+                    </div>
+                </ng-container>
+            </div>
+            <!-- Contraseña -->
+            <div class="row">
+                <div class="col-12 mt-15 group-input">
+                    <div class="password-group" style="width: 100%">
+                        <input class="form-control overrideheight rightText style-right"
+                                [ngClass]="{ 'wrongText': registerForm.get('password').errors && (registerForm.get('password').dirty || registerForm.get('password').touched) }"
+                                type="{{ typeDataPass ? 'text' : 'password' }}"
+                                id="password"
+                                [(ngModel)]="register.password"
+                                formControlName="password" autocomplete="off" placeholder="Contraseña"
+                                />
+                                <ng-container style="margin-top:5px" *ngFor="let validation of validation_messages.password">
+                                  <div class="input-error-message" *ngIf="registerForm.get('password').hasError(validation.type) && (registerForm.get('password').dirty || registerForm.get('password').touched)">
+                                    {{ validation.message }}
+                                  </div>
+                                </ng-container>
+                    </div>
+                    <button class="input-icon icon-right"
+                      type="button" (click)="showPass()">
+                      <div *ngIf = "typeDataPass===true"> <i  class = "fa fa-eye"      ></i> </div>
+                      <div *ngIf = "typeDataPass===false">  <i  class = "fa fa-eye-slash"></i> </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="mt-15"><span class="how-know">¿Cómo nos conociste?</span></div>
+                    <div style="margin-top: 5px;"><span class="how-know-sub">Selecciona una de las siguientes opciones</span></div>
+                </div>
+            </div>
+
+            <div class="row mt-10">
+                <div class="col-12 col-s-12 content-know" >
+                    <div class="button-know" *ngFor="let e of options" [ngClass]="{active: register.know === e.id}" (click)="selectOption(e)">
+                        <a class = "link-social" style="text-decoration: none;"   target="_blank" rel="noreferrer">
+                            <span class="text-skill" [ngClass]="{activeText: register.know === e.id}">{{e.nombre}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-40">
+                <div class="col-12 d-flex align-items-center" >
+                    <div class="customSelect">
+                          <input type="checkbox" id="checkOther" [checked]="acceptTermns"(change)="acceptTermns = !acceptTermns" ><label for="checkOther"></label>
+                        </div>
+                        <label class="label-text terminos">Acepto <a>terminos y condiciones</a></label>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="row mt-40">
+            <div class="col-12 d-flex justify-content-center">
+                <button class="btn-registrarse mw-140"
+                    [disabled]="!registerForm.valid || register.know === 0 || !acceptTermns"
+                    type="submit"
+                    (click)="registroFunc()"><span class="text-btn">Registrarse</span>
+                </button>
+            </div>
+        </div>
+        <div class="row mt-20 mb-40">
+            <div class="col-12" style="text-align: center;">
+                <div><span class="have-account">¿Ya tienes cuenta?</span></div>
+                <div style="margin-top:-5px"><span class="login-text">Iniciar sesión</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row" style="padding: 20px 20px 14px 20px;">
+        <div class="col-4 d-flex justify-content-start align-items-center" onclick="window.location='/'">
+            <img src="../../../assets/icons/menu.svg" alt="">
+        </div>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+            <img src="../../../assets/icons/lokl_vector.svg" alt="">
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+            <img src="../../../assets/icons/user.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 progress myprogressbar pd-l-0 pd-r-0">
+            <div class="progress-bar" role="progressbar" [style.width]="valueNow+'%'" attr.aria-valuenow="{{valueNow}}" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+</div>
